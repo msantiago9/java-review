@@ -21,6 +21,14 @@ public class App1 {
      * What if damage was a double, but health was an int?
      */
     public static void main(String[] args) {
+        String name = "Hello World";
+        int attack = 10;
+        int defense = 5;
+        int damage = attack - defense;
+        double health = 100;
+        double newHealth = health - damage;
 
+        System.out.printf("%s lost %f HP.\n", name, damage);
+        System.out.printf("%f / %f", newHealth, health);
     }
 }
