@@ -1,3 +1,7 @@
+import java.io.File;
+import java.util.Random;
+import java.util.Scanner;
+
 public class App2 {
     /**
      * Challenge 2: User Input
@@ -25,7 +29,27 @@ public class App2 {
      * 
      */
     public static void main(String[] args) {
-        // Your Code Below
 
+        String name = "Bob Ross";
+        int damage = 10;
+        int hp = 20;
+
+        Scanner input = new Scanner(System.in);
+        name = input.nextLine();
+        damage = input.nextInt();
+        hp = input.nextInt();
+        double critChance = input.nextDouble();
+
+        if(critChance <= Math.random()) {
+            damage *= 2;
+        }
+
+        if(damage >= hp){
+            System.out.println(name + " has died!");
+        } else {
+            System.out.println(name + " survived!");
+        }
+
+        input.close();
     }
 }

@@ -21,14 +21,25 @@ public class App1 {
      * What if damage was a double, but health was an int?
      */
     public static void main(String[] args) {
-        String name = "Hello World";
-        int attack = 10;
-        int defense = 5;
-        int damage = attack - defense;
-        double health = 100;
-        double newHealth = health - damage;
 
-        System.out.printf("%s lost %f HP.\n", name, damage);
-        System.out.printf("%f / %f", newHealth, health);
+        String name = "Lance";
+        int attack = 23;
+        int defense = 3;
+        int damage = attack - defense;
+        int hp = 20;
+        if (damage < 0) {
+            damage = 0;
+        }
+        int currentHp = hp - damage;
+        System.out.println(name + " lost " + damage + " HP and is now " + currentHp + " HP");
+
+
+        double a = 3.14159;
+        int b = (int)(a);
+        System.out.println(b);
+
+        int c = 5;
+        double d = c;
+        System.out.println(d);
     }
 }
